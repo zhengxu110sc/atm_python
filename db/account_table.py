@@ -38,15 +38,15 @@ def add_user(username):
 
 
 
-# # 验证用户是否存在
-# def auth_user(accdata):
-#     with open("account_table","r+") as f:
-#         f1=json.dumps(f.read())
-#         f2=json.loads(f1)
-#         if accdata["name"] in f2:
-#             print("用户已经存在")
-#         else:
-#             print("恭喜你，可以创建该用户。")
-#
-#
+# 验证用户是否存在
+def auth_user(accdata):
+    with open("account_table","r+") as f:
+        f1=json.dumps(f.read())
+        f2=json.loads(f1)
+        if accdata["name"] in f2:
+            print("用户已经存在")
+        else:
+            print("恭喜你，可以创建该用户。")
+
+
 # auth_user(acc_dict)
