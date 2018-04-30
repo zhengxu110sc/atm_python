@@ -6,8 +6,9 @@ Base_dir=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(Base_dir)
 # 创建数据库路径
 data_path={
-    "acc":"%s/db/account_table"%Base_dir,
+    "acc":"%s/db/"%Base_dir,
     "shopping_car":"%s/db/shopping_car"%Base_dir,
+
 }
 # 设置默认额度
 credict_default={'credit': 15000.0}
