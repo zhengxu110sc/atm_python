@@ -1,5 +1,5 @@
 #程序运行窗口
-import os,sys,json
+import os,sys
 # 创建主程序目录
 Base_dir=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # 导入到配置文件
