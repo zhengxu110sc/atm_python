@@ -8,7 +8,7 @@ sys.path.append(Base_dir)
 
 acc_dict={
     "is_login":False,
-    "name":"zhengxu",
+    "name":"liuliu",
     "age":18,
     "phone":15884630951,
     "occupation":"it",
@@ -36,11 +36,17 @@ def add_user(username):
         user_info=json.dumps(acc_dict)
         f_add_user.write(user_info)
 
-add_user("zhangsan")
-add_user("lisi")
 
-# 验证用户是否存在
 
-def auth_user(acc_data):
-    with open("account_table","r+",encoding="utf-8") as f:
-       pass
+# # 验证用户是否存在
+# def auth_user(accdata):
+#     with open("account_table","r+") as f:
+#         f1=json.dumps(f.read())
+#         f2=json.loads(f1)
+#         if accdata["name"] in f2:
+#             print("用户已经存在")
+#         else:
+#             print("恭喜你，可以创建该用户。")
+#
+#
+# auth_user(acc_dict)
