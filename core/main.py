@@ -7,6 +7,10 @@ sys.path.append(Base_dir)
 # 导入验证页面
 from core import auth
 from core.auth import is_login
+from core.credit import credit_center
+from core.shopping import shopping_center
+from core.personal import personal_center
+
 # 创建一个空的
 # 数据文件，将其放入到内存区域中，用来进行首次登陆做替换用。
 user_dict={
@@ -14,9 +18,33 @@ user_dict={
     "name":None,
     "account":None
 }
+#定交互程序。
 @is_login
 def interactive(acc_data):
-    print(acc_data)
+    print_menu=u"""
+    \33[34;0m请输入序号，进入相应的程序。
+    1>>购物中心
+    2>>个人中心
+    3>>信用卡中心
+    q>>退出当前程序。
+    \33[0m    
+    """
+    print(print_menu)
+    interactive_menu={
+        "1":shopping_center,
+        "2":personal_center,
+        "3":credit_center,
+    }
+    while True:
+        choice_id=input("\33[34;0m请输入您的选择,退出请按【q】>>:\33[0m").strip()
+        if choice_id.isdigit():
+            interactive_menu[choice_id](acc_data)
+        elif choice_id=="q":
+            exit("感谢您使用本系统。")
+
+        
+
+
 def run(run_type):
     if run_type=="atm":
         acc_data=auth.select_user(user_dict)
