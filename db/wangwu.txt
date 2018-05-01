@@ -1,1 +1,1 @@
-{"name": "wangwu", "is_login": false, "age": 18, "phone": 15884630951, "occupation": "it", "enroll_date": 1984, "expire_date": 1989, "account": 1234567, "password": 1314520, "credit": 15000.0, "balance": 15000.0, "status": 0, "pay_day": 22}
+{"name": "wangwu", "is_login": false, "age": 18, "phone": 15884630951, "occupation": "it", "enroll_date": 1984, "expire_date": 1989, "account": 1234567, "password":123, "credit": 15000.0, "balance": 15000.0, "status": 0, "pay_day": 22}
