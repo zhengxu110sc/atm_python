@@ -29,18 +29,21 @@ def interactive(acc_data):
     q>>退出当前程序。
     \33[0m    
     """
-    print(print_menu)
+
     interactive_menu={
         "1":shopping_center,
         "2":personal_center,
         "3":credit_center,
     }
     while True:
+        print(print_menu)
         choice_id=input("\33[34;0m请输入您的选择,退出请按【q】>>:\33[0m").strip()
-        if choice_id.isdigit():
+        if choice_id.isdigit() and int(choice_id)<len(interactive_menu):
             interactive_menu[choice_id](acc_data)
         elif choice_id=="q":
             exit("感谢您使用本系统。")
+        else:
+            print("对不起，非法操作，请重新输入。")
 
         
 

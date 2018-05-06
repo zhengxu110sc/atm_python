@@ -25,7 +25,6 @@ def open_file(acc_date):
     if user_data:
         with open(user_data,"r+")as f:
             user_datas=json.loads(f.read())
-            count=0
         if acc_date["name"]==user_datas["name"] and acc_date["password"]==user_datas["password"]:
             user_datas["is_login"]=True
             acc_date=user_datas
